@@ -67,11 +67,25 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    val camerax_version = "1.3.1"
     // CameraX
-    implementation (libs.androidx.camera.camera2)
-    implementation (libs.androidx.camera.lifecycle)
-    implementation (libs.androidx.camera.view)
+    implementation ("androidx.camera:camera-camera2:${camerax_version}")
+    implementation ("androidx.camera:camera-lifecycle:${camerax_version}")
+    implementation ("androidx.camera:camera-view:${camerax_version}")
 
     // ML Kit
-    implementation (libs.document.scanner)
+    implementation ("com.google.mlkit:text-recognition:16.0.0")
+
+    // Добавляем основные Compose зависимости
+    ///implementation platform("androidx.compose:compose-bom:2024.02.00")
+    implementation ("androidx.compose.ui:ui")
+    implementation ("androidx.compose.material3:material3")
+    implementation ("androidx.compose.ui:ui-tooling-preview")
+    implementation ("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
+
+    // Permissions
+    implementation ("com.google.android.gms:play-services-mlkit-document-scanner:16.0.0-beta1")
+    implementation( "com.google.accompanist:accompanist-permissions:0.34.0")
+    implementation ("com.google.mlkit:text-recognition:16.0.0")
 }
+
