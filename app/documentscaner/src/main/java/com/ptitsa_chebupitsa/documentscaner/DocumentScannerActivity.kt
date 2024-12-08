@@ -7,8 +7,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -16,6 +14,10 @@ import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions
 import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions.SCANNER_MODE_FULL
 import com.google.mlkit.vision.documentscanner.GmsDocumentScanning
 import com.google.mlkit.vision.documentscanner.GmsDocumentScanningResult
+import com.ptitsa_chebupitsa.documentscaner.scanner.DocumentScannerIntent
+import com.ptitsa_chebupitsa.documentscaner.scanner.DocumentScannerState
+import com.ptitsa_chebupitsa.documentscaner.scanner.ScannerScreen
+import com.ptitsa_chebupitsa.documentscaner.scanner.ScannerViewModel
 import com.ptitsa_chebupitsa.documentscaner.ui.theme.VinScanerTheme
 import kotlinx.coroutines.launch
 

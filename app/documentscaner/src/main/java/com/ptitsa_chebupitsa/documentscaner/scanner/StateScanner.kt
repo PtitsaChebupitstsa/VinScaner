@@ -1,4 +1,4 @@
-package com.ptitsa_chebupitsa.documentscaner
+package com.ptitsa_chebupitsa.documentscaner.scanner
 
 import android.graphics.Bitmap
 

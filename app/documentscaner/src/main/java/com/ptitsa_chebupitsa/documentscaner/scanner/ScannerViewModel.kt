@@ -1,4 +1,4 @@
-package com.ptitsa_chebupitsa.documentscaner
+package com.ptitsa_chebupitsa.documentscaner.scanner
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -53,7 +53,6 @@ class ScannerViewModel(
                 hideCamera()
             }
             is DocumentScannerIntent.AcceptResult -> {
-                // Handle accepting the result
             }
         }
     }

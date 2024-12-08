@@ -69,10 +69,8 @@ fun CameraPreview(
         ) { view ->
             cameraProviderFuture.addListener({
                 try {
-                    // Освобождаем предыдущие привязки камеры
                     cameraProvider?.unbindAll()
 
-                    // Получаем новый провайдер
                     cameraProvider = cameraProviderFuture.get()
 
                     val preview =
@@ -115,7 +113,6 @@ fun CameraPreview(
                                 }
                             }
 
-                    // Связываем use cases с камерой
                     cameraProvider?.bindToLifecycle(
                         lifecycleOwner,
                         CameraSelector.DEFAULT_BACK_CAMERA,
@@ -128,7 +125,6 @@ fun CameraPreview(
             }, ContextCompat.getMainExecutor(context))
         }
 
-        // Прямоугольник для наведения
         Canvas(modifier = Modifier.fillMaxSize()) {
             val rectWidth = size.width * 0.8f
             val rectHeight = size.height * 0.1f

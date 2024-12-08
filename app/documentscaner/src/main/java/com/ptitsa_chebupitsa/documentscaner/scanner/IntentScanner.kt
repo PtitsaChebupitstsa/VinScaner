@@ -1,4 +1,4 @@
-package com.ptitsa_chebupitsa.documentscaner
+package com.ptitsa_chebupitsa.documentscaner.scanner
 
 import com.google.mlkit.vision.documentscanner.GmsDocumentScanningResult
 
