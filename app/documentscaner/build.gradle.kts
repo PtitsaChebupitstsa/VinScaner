@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 
@@ -8,11 +8,11 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ptitsa_chebupitsa.documentscaner"
+        //  applicationId = "com.ptitsa_chebupitsa.documentscaner"
         minSdk = 28
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        // versionCode = 1
+        // versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -25,7 +25,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -69,23 +69,22 @@ dependencies {
 
     val camerax_version = "1.3.1"
     // CameraX
-    implementation ("androidx.camera:camera-camera2:${camerax_version}")
-    implementation ("androidx.camera:camera-lifecycle:${camerax_version}")
-    implementation ("androidx.camera:camera-view:${camerax_version}")
+    implementation("androidx.camera:camera-camera2:${camerax_version}")
+    implementation("androidx.camera:camera-lifecycle:${camerax_version}")
+    implementation("androidx.camera:camera-view:${camerax_version}")
 
     // ML Kit
-    implementation ("com.google.mlkit:text-recognition:16.0.0")
+    implementation("com.google.mlkit:text-recognition:16.0.0")
 
     // Добавляем основные Compose зависимости
-    ///implementation platform("androidx.compose:compose-bom:2024.02.00")
-    implementation ("androidx.compose.ui:ui")
-    implementation ("androidx.compose.material3:material3")
-    implementation ("androidx.compose.ui:ui-tooling-preview")
-    implementation ("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
+    // /implementation platform("androidx.compose:compose-bom:2024.02.00")
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
 
     // Permissions
-    implementation ("com.google.android.gms:play-services-mlkit-document-scanner:16.0.0-beta1")
-    implementation( "com.google.accompanist:accompanist-permissions:0.34.0")
-    implementation ("com.google.mlkit:text-recognition:16.0.0")
+    implementation("com.google.android.gms:play-services-mlkit-document-scanner:16.0.0-beta1")
+    implementation("com.google.accompanist:accompanist-permissions:0.34.0")
+    implementation("com.google.mlkit:text-recognition:16.0.0")
 }
-
